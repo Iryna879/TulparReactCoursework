@@ -6,7 +6,7 @@ import {PriceListItem} from "./priceListItem"
 
 export function PriceList (){
 
-    const [price, setPrice] = useState([]);
+    const [price, setPrice] = useState({});
 
     useEffect(() => {
         fetch("http://localhost:3001/api/services")
