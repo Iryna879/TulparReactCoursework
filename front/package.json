@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "react-data-grid": "^7.0.0-beta.7",
     "react-router-dom": "^6.0.2"
   }
 }

@@ -9,7 +9,7 @@ export function PriceList (){
     const [price, setPrice] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/services")
+        fetch("http://localhost:3002/api/services")
             .then(res => {
                 // console.log(res);
                 return res.json()
@@ -36,7 +36,7 @@ export function PriceList (){
                         <li>УЗД</li>
                     </ul>
 
-                        {/*<PriceListItem price={price}></PriceListItem>*/}
+                        <PriceListItem price={price}></PriceListItem>
 
                 </div>
             </div>

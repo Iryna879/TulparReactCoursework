@@ -1,54 +1,60 @@
-/*
 import React, {useEffect, useState} from "react";
-
+import ReactDataGrid from "react-data-grid";
 
 export function PriceListItem (props){
     const price = props.price;
-/!*const title = price.map(p =>
-    <li key={p.id}>{p.title}</li>
-)
-    const priceLi = price.map(p =>
-        <li key={p.id}>{p.price}</li>
-    )
-const li = price.map(p =>
-    <ul>
-        <li key={p.id}>{p.title}</li>
-    <li key={p.id}>{p.price}</li>
-    </ul>
-)*!/
-    /!*<li>Назва послуги</li>
+const columns = [
+    {key: "name", name:"Назва послуги"},
+    {key: "price", name:"Вартість"}
+];
+let rows = [];
+price.map(p => {
+    return rows.push(p.service)
+} );
+console.log("rows: " + rows.length);
+
+
+
+    /*<li>Назва послуги</li>
     <li>Вартість</li>
     <li>Назва послуги</li>
-    <li>Вартість</li>*!/
+    <li>Вартість</li>*/
+
+    let res = price.map(function (p){
+        return <ul key={p._id}>
+            <li>{p.service}</li>
+            <li>{p.price}</li>
+            </ul>
+        /*<tr key={p._id}>
+            <td>{p.service}</td>
+            <td>{p.price}</td>
+        </tr*/
+    });
 return (
-    /!*<table className="gridServices">
-            <tr>
-
-                {price.map(p =>
-                    <td key={p.id}>{p.title}</td>)}
-
-            </tr>
-        <tr>
-
-            {price.map(p =>
-                <td key={p.id}>{p.price}</td>)}
-
-        </tr>
-    </table>*!/
-    <ul className="gridServices">
+    /*<table >
+       <thead>
+       <tr>
+           <td>Назва послуги</td>
+           <td>Вартість</td>
+       </tr>
+       </thead>
+        <tbody>
+        {res}
+        </tbody>
+    </table>*/
+   /* <ul className="gridServices">
         <li>Назва послуги</li>
         <li>Вартість</li>
         <li>Назва послуги</li>
         <li>Вартість</li>
-        {
-    price.map((p) =>
+        {res}
+    </ul>*/
 
-            <li key={p.id}>{p.title} </li>
-        <li>{p.price} </li>
-
-    )
-        }
-    </ul>
+    <ReactDataGrid
+        columns={columns}
+        rowGetter={(i) => rows[i]}
+        rowsCount={rows.length}
+        />
 
 )
-}*/
+}
