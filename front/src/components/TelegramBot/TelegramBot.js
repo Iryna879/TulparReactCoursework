@@ -25,7 +25,7 @@ export default class TelegramBot extends React.Component {
 
 	send() {
 		this.setState({ isLoaded: false })
-		fetch("http://localhost:3001/api/sendTelegram/",
+		fetch("/api/sendTelegram/",
 			{
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
