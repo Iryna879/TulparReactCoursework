@@ -15,7 +15,7 @@ const map1 = price.map(function(p) {
     let mass = [];
     price.map(serv => {
 
-        mass.push({name: serv.service, price: serv.price});
+        mass.push({id:serv.idIntermediateDepSer, name: serv.service, price: serv.price});
     })
     let title = mass.slice(0,4);
 console.log("mass: " + mass.length + " " + mass);

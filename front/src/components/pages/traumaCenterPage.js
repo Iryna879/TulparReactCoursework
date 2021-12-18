@@ -8,6 +8,7 @@ import Recommend from "../otherComponents/recommend";
 import WhyWe from "../otherComponents/whyWe";
 import Map from "../otherComponents/map";
 import Contact from "../otherComponents/contact";
+import {PriceList} from "../otherComponents/priceList";
 
 export function TraumaCenterPage (){
 
@@ -19,6 +20,7 @@ export function TraumaCenterPage (){
             <Header name={name} logo={logo}></Header>
             <main>
             <WhatIsBlock name={name}></WhatIsBlock>
+                <PriceList></PriceList>
             <WhyWe></WhyWe>
             <div className="container">
             <Recommend></Recommend>
