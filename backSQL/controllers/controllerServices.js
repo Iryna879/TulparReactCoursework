@@ -1,4 +1,4 @@
-let department = require('../models/department');
+let department = require('../models/services');
 
 /*exports.all = function (req, res) {
     department.all(function (err, docs) {

@@ -6,8 +6,8 @@ export function ServiceItem (props){
   const department = props.department;
 
   let mass = [];
-    services.map(serv => {if(serv.department == department){
-        mass.push(serv.title);
+    services.map(serv => {if(serv.title == department){
+        mass.push(serv.service);
     }})
     let title = mass.slice(0,4);
 

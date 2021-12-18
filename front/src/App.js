@@ -17,7 +17,7 @@ import TelegramBot from "./components/TelegramBot/TelegramBot";
 function App() {
   return (
       <BrowserRouter className="App">
-<TelegramBot></TelegramBot>
+{/*<TelegramBot></TelegramBot>*/}
         {<Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<ServicePage />} />

@@ -13,7 +13,7 @@ const logo = props.logo;
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/services")
+        fetch("http://localhost:3002/api/services")
             .then(res => {
                 // console.log(res);
                 return res.json()

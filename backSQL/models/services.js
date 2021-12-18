@@ -5,7 +5,7 @@ let db = require('../db');
     this.phone = department.phone;
 };*/
 exports.getAll = (result) => {
-    db.query("SELECT * FROM department", (err, res) => {
+    db.query("SELECT title, phone, service, price FROM intermediatedepser, department, services WHERE  intermediatedepser.idDep = department.idDepartment AND intermediatedepser.idSer = services.idServices", (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);

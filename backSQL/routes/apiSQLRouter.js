@@ -1,8 +1,8 @@
 let express = require('express');
 let router = express.Router();
 
-let departmentController = require('../controllers/controllerDepartment');
+let serviceController = require('../controllers/controllerServices');
 
-router.get('/api/department', departmentController.findAll);
+router.get('/api/services', serviceController.findAll);
 
 module.exports = router;
