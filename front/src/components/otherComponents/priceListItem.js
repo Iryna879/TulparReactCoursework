@@ -18,9 +18,7 @@ const map1 = price.map(function(p) {
 
         mass.push({id:serv.idIntermediateDepSer, name: serv.service, price: serv.price});
     })
-    let title = mass.slice(0,4);
-console.log("mass: " + mass.length + " " + mass);
-    console.log("title: " + title.length);
+
 
 const gridStyle = {minHeight: 550}
 
@@ -58,14 +56,12 @@ return (
         <li>Вартість</li>
         {res}
     </ul>*/
-<div>
+
    <ReactDataGrid
        idProperty="id"
         columns={columns}
         dataSource={mass}
        style={gridStyle}
         />
-<div>Hello</div>
-</div>
 )
 }

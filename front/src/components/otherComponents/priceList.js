@@ -19,10 +19,9 @@ export function PriceList (){
             })
             .catch(err =>
                 console.log(err))
-    })
+    }, [])
 
     return (
-        <div className="container">
             <div className="row  ">
                 <div className="col-xl-12 priceList">
                     <h6>Прайс лист</h6>
@@ -39,7 +38,6 @@ export function PriceList (){
 
                 </div>
             </div>
-        </div>
        )
 
 
