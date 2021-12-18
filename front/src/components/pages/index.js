@@ -4,8 +4,6 @@ import logo from  "./../../img/cardioCenterLogo.png";
 import {IndexHeader} from "./../otherComponents/indexHeader";
 import {OurServicesRow} from "../otherComponents/ourServicesRow";
 import {Footer} from "../otherComponents/footer";
-import WhatIsBlock from "../otherComponents/whatIsBlock";
-import WhyWe from "../otherComponents/whyWe";
 import Recommend from "../otherComponents/recommend";
 import Map from "../otherComponents/map";
 import Contact from "../otherComponents/contact";

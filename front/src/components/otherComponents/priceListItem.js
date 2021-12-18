@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ReactDataGrid from "@inovua/reactdatagrid-community";
 import '@inovua/reactdatagrid-community/index.css';
+
 export function PriceListItem (props){
     const price = props.price;
 const columns = [
