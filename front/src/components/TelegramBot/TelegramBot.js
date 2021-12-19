@@ -83,13 +83,15 @@ export default class TelegramBot extends React.Component {
 	}
 }*/
 
-import React from "react";
+import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 
 import "./../../style/telegramBot.css";
 
 export default function TelegramBot() {
 	const { register, errors, handleSubmit, reset } = useForm();
+
+const [hide, setHide] = useState(false);
 	const onSubmit = (data) => {
 		//alert(JSON.stringify(data));
 		fetch("/api/sendTelegram/",
@@ -112,10 +114,12 @@ export default function TelegramBot() {
 		reset({name: "", tel: ""});
 	};
 	console.log(errors);
-
+//+ hide ? 'hide' : 'show'  onClick={() => setHide(true)}
 	return (
-		<div className="container-fluid formFluid">
+		<div className={`container-fluid formFluid ${hide ? 'hide' : 'show'} ` } >
 		<form onSubmit={handleSubmit(onSubmit)}>
+			<input type="button" className="close"  onClick={() => setHide(true)}  />
+
 			<h1>Залиште свої дані</h1>
 
 			<input
@@ -139,6 +143,7 @@ export default function TelegramBot() {
 		</form>
 		</div>
 	);
+
 }
 
 
