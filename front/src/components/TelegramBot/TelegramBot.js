@@ -89,7 +89,7 @@ import { useForm } from "react-hook-form";
 import "./../../style/telegramBot.css";
 
 export default function TelegramBot() {
-	const { register, errors, handleSubmit } = useForm();
+	const { register, errors, handleSubmit, reset } = useForm();
 	const onSubmit = (data) => {
 		//alert(JSON.stringify(data));
 		fetch("/api/sendTelegram/",
@@ -108,12 +108,13 @@ export default function TelegramBot() {
 			})
 			.catch(err => {
 				console.log(err);
-			})
+			});
+		reset({name: "", tel: ""});
 	};
 	console.log(errors);
 
 	return (
-		<div>
+		<div className="container-fluid formFluid">
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<h1>Залиште свої дані</h1>
 
@@ -127,9 +128,9 @@ export default function TelegramBot() {
 				type="tel" placeholder="Номер телефону"
 				{...register("tel", {
 					required: true,
-					maxLength: 15,
+					maxLength: 17,
 					minLength: 9,
-					pattern: /[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}$/
+					pattern: /^\+380\d{9}$/
 				})}
 			/>
 
