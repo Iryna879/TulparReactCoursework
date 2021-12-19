@@ -1,3 +1,4 @@
+/*
 import React from "react";
 
 export default class TelegramBot extends React.Component {
@@ -80,4 +81,67 @@ export default class TelegramBot extends React.Component {
 			</div>
 		);
 	}
+}*/
+
+import React from "react";
+import { useForm } from "react-hook-form";
+
+import "./../../style/telegramBot.css";
+
+export default function TelegramBot() {
+	const { register, errors, handleSubmit } = useForm();
+	const onSubmit = (data) => {
+		//alert(JSON.stringify(data));
+		fetch("/api/sendTelegram/",
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data)
+			}
+		)
+			.then(res => {
+				console.log("Result:", res);
+				return res.json();
+			})
+			.then(data => {
+				console.log(data);
+			})
+			.catch(err => {
+				console.log(err);
+			})
+	};
+	console.log(errors);
+
+	return (
+		<form onSubmit={handleSubmit(onSubmit)}>
+			<label>First name</label>
+			<input
+				type="text"
+				{...register("name", { required: true, maxLength: 80 })}
+			/>
+
+			<label>Email</label>
+			<input
+				type="text"
+				{...register("body", {
+					required: true,
+					pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+				})}
+			/>
+			<label>Mobile number</label>
+			<input
+				type="tel"
+				{...register("tel", {
+					required: true,
+					maxLength: 11,
+					minLength: 8
+				})}
+			/>
+
+
+			<input type="submit" />
+		</form>
+	);
 }
+
+
