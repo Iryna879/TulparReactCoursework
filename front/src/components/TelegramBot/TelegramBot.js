@@ -113,34 +113,30 @@ export default function TelegramBot() {
 	console.log(errors);
 
 	return (
+		<div>
 		<form onSubmit={handleSubmit(onSubmit)}>
-			<label>First name</label>
+			<h1>Залиште свої дані</h1>
+
 			<input
-				type="text"
+				type="text" placeholder="Введіть ім'я та прізвище"
 				{...register("name", { required: true, maxLength: 80 })}
 			/>
 
-			<label>Email</label>
+
 			<input
-				type="text"
-				{...register("body", {
-					required: true,
-					pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-				})}
-			/>
-			<label>Mobile number</label>
-			<input
-				type="tel"
+				type="tel" placeholder="Номер телефону"
 				{...register("tel", {
 					required: true,
-					maxLength: 11,
-					minLength: 8
+					maxLength: 15,
+					minLength: 9,
+					pattern: /[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}$/
 				})}
 			/>
 
 
 			<input type="submit" />
 		</form>
+		</div>
 	);
 }
 
