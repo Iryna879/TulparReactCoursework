@@ -7,11 +7,12 @@ import call from "./../../img/call.png";
 import write from "./../../img/write.png";
 import whatsApp from "./../../img/whatsapp.png";
 import more from "./../../img/more.png"
+import TelegramBot from "../TelegramBot/TelegramBot";
 
 export function IndexHeader (props){
 const logo = props.logo;
     const [services, setServices] = useState([]);
-
+   const [click, setClick] = useState(false);
     useEffect(() => {
         fetch("http://localhost:3002/api/services")
             .then(res => {
@@ -63,13 +64,20 @@ const logo = props.logo;
 
                     <ServiceItem services={services}   department="Травма-реабілітаційний центр"></ServiceItem>
                     <button onClick={(e) => window.location.assign('http://localhost:3000/traumaCenter') }>Всі послуги</button>
+                    <button onClick={() => setClick(true) }>Click me</button>
                     <ul className="social">
                         <li><a href="https://www.instagram.com/onclinic.ua/"><img src={insta} alt="inst"/></a></li>
-                        <li><a href="#"><img src={call} alt="call"/></a></li>
+                        <li></li>
                         <li><a href="#"><img src={write} alt="write"/></a></li>
                         <li><a href="#"><img src={whatsApp} alt="whatsApp"/></a></li>
                         <li><a href="#"><img src={more} alt="more"/></a></li>
                     </ul>
+
+                    <div>
+                    {
+                        click ? <TelegramBot/> : ""
+                    }
+                    </div>
                 </div>
             </div>
         </header>)
