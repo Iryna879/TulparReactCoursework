@@ -10,7 +10,7 @@ import {CardioCenterPage} from "./components/pages/cardioCenterPage";
 import {TraumaCenterPage} from "./components/pages/traumaCenterPage";
 import {OurSpecialistsPage} from "./components/pages/ourSpecialistsPage";
 import "./style/font.css";
-
+import SymptomCheckers from "./components/SymptomCheckers/symptomCheckers";
 
 
 
@@ -25,6 +25,7 @@ function App() {
             <Route path="/cardioCenter" element={<CardioCenterPage />} />
             <Route path="/traumaCenter" element={<TraumaCenterPage />} />
             <Route path="/ourSpecialists" element={<OurSpecialistsPage />} />
+            <Route path="/symptomCheckers" element={<SymptomCheckers />} />
         </Routes>}
 
       </BrowserRouter>
