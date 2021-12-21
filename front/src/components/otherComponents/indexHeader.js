@@ -37,7 +37,7 @@ const logo = props.logo;
                         <ul className="menu">
                             <li><Link to="/">Головна</Link></li>
                             <li><Link to="/services">Наші послуги</Link></li>
-                            <li><Link to="/reports">Звіти</Link></li>
+                            <li><Link to="/ourSpecialists">Наші спеціалісти</Link></li>
                             <li><Link to="/contact">Про нас</Link></li>
                             <li><Link to="/news">Новини</Link></li>
                             <li>УКР</li>

@@ -5,7 +5,7 @@ exports.findAll = (req, res) => {
         if (err)
             res.status(500).send({
                 message:
-                    err.message || "Что-то случилось во время получения всех специалистов"
+                    err.message || "Щось трапилося під час отримання всіх користувачів"
             });
         else
             res.send(data);
