@@ -1,18 +1,18 @@
-.specialists {
+.specialistsListPage {
     display: flex;
     margin-top: 70px;
     margin-bottom: 50px;
 }
-.specialists li {
+.specialistsListPage li {
     margin-right: 50px;
     cursor: pointer;
 }
-.specialists img {
+.specialistsListPage img {
     width: 129px;
     height: 135px ;
     border-radius: 50%;
 }
-.specialists p {
+.specialistsListPage p {
     font-family: "TTHoves-Bold";
     font-weight: 800;
     font-size: 14px;

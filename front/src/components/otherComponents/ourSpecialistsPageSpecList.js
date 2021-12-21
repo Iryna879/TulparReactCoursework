@@ -24,7 +24,7 @@ export function  OurSpecialistsPageSpecList ()  {
         <div className="container">
             <div className="row  ">
                 <div className="col-xl-12 ">
-                    <ul className="specialists">
+                    <ul className="specialistsListPage">
                         {
                             specialists.map((s, index) => {
                                 while (index < 6) {

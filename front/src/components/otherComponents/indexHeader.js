@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import  {ServiceItem} from "./serviceItem";
 import insta from "./../../img/insta.png";
-import call from "./../../img/call.png";
 import write from "./../../img/write.png";
 import whatsApp from "./../../img/whatsapp.png";
 import more from "./../../img/more.png"
@@ -36,9 +35,9 @@ const logo = props.logo;
                     <div className="col-xl-6 offset-3">
                         <ul className="menu">
                             <li><Link to="/">Головна</Link></li>
-                            <li><Link to="/services">Наші послуги</Link></li>
-                            <li><Link to="/ourSpecialists">Наші спеціалісти</Link></li>
-                            <li><Link to="/contact">Про нас</Link></li>
+                            <li><Link to="/services">Послуги</Link></li>
+                            <li><Link to="/ourSpecialists">Спеціалісти</Link></li>
+                            <li><Link to="/contact">Ми</Link></li>
                             <li><Link to="/news">Новини</Link></li>
                             <li>УКР</li>
                         </ul>

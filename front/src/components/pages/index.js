@@ -16,8 +16,8 @@ export function Index (){
     return (
         <div>
         <IndexHeader logo={logo}></IndexHeader>
-        <OurServicesRow name={name}></OurServicesRow>
             <main>
+        <OurServicesRow name={name}></OurServicesRow>
                 <div className="container">
                     <SpecialistsIndex></SpecialistsIndex>
                     <PriceList></PriceList>

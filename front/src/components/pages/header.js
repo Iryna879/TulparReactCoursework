@@ -31,9 +31,9 @@ const  Header = (props) => {
                         <div className="col-xl-6 offset-3">
                             <ul className={`${name}_menu`}>
                                 <li><Link to="/">Головна</Link></li>
-                                <li><Link to="/services">Наші послуги</Link></li>
-                                <li><Link to="/reports">Звіти</Link></li>
-                                <li><Link to="/contact">Про нас</Link></li>
+                                <li><Link to="/services">Послуги</Link></li>
+                                <li><Link to="/ourSpecialists">Спеціалісти</Link></li>
+                                <li><Link to="/contact">Ми</Link></li>
                                 <li><Link to="/news">Новини</Link></li>
                                 <li>УКР</li>
                             </ul>

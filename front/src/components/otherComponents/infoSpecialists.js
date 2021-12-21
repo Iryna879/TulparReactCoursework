@@ -8,8 +8,9 @@ export function  InfoSpecialists (props)  {
   let fullName = "";
   let job = "";
   let department = "";
-  let career, activity = "";
-  let careerMass, activityMass = [];
+  let career = "";
+      let activity = "";
+  let careerMass = []; let activityMass = [];
   specialist.map(s => {
       if (s.idEmployees == emp) {
           fullName = s.name + " " + s.surname;

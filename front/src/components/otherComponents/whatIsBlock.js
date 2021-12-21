@@ -8,11 +8,9 @@ const  WhatIsBlock = (props) => {
     useEffect(() => {
         fetch("http://localhost:3001/api/whatIsBlocks")
             .then(res => {
-                // console.log(res);
                 return res.json()
             })
             .then(res => {
-                // console.log(res)
                 setItems(res)
             })
             .catch(err =>
