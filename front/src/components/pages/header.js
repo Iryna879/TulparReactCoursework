@@ -17,7 +17,7 @@ const  Header = (props) => {
             })
             .catch(err =>
                 console.log(err))
-    })
+    }, [])
 
     return (
         items.map(item => {if(item.name == name){

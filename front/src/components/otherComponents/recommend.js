@@ -17,7 +17,7 @@ export function Recommend () {
             })
             .catch(err =>
                 console.log(err))
-    })
+    }, [])
 
     return (
 
